@@ -9,7 +9,10 @@
 
 #include <stdio.h>
 #include <tchar.h>
-
+#include <ctime>
+#include <Windows.h>
+#include <iostream>
+#include <fstream>
 
 
 // TODO: reference additional headers your program requires here

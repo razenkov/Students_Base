@@ -1,7 +1,6 @@
 #pragma once
 #include "stdafx.h"
 #include "Backup.h"
-#include "Students_base.h"
 
 
 void Backup::saveToBackUp(STUDENT* pJornal)
@@ -19,8 +18,7 @@ void Backup::saveToBackUp(STUDENT* pJornal)
 
 		fout << '\n';
 	}
-	HANDLE hwnd = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
+
 	std::cout << "Backuped up to temp file was successful\n";
 	fout.close();
 }

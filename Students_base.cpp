@@ -1,8 +1,5 @@
 #include "stdafx.h"
 #include "Students_base.h"
-#include <ctime>
-//#include <cmath>
-//#include <string>
 
 
 void innit(STUDENT* pJornal, int num)
@@ -386,10 +383,9 @@ STUDENT* addStudent(STUDENT* pJornal, int *num)
 		for (int i = 0; i < newNum - 1; ++i)
 		{
 			newJornal[i] = pJornal[i];
-
 		}
 
-		//show_students(pJornal, newNum);
+		
 
 		double midMark = 0;
 
@@ -405,17 +401,12 @@ STUDENT* addStudent(STUDENT* pJornal, int *num)
 			midMark = midMark + newJornal[*num - 1].mark[j];
 		}
 
-		//show_students(pJornal, newNum);
+		
 
 		midMark = midMark / size2;
 		pJornal[*num - 1].midMrk = midMark;
-		//std::cout << pJornal[newNum - 1].soname << std::endl;
-
-
-		//std::cout << pJornal[newNum - 1].soname << std::endl;
-		//std::cout << pJornal[*num - 1].soname << std::endl;
-
-
+		
+		
 		return newJornal;
 		delete newJornal;
 		system("pause");

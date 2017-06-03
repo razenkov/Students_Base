@@ -1,7 +1,7 @@
 
 #pragma once
+#include "stdafx.h"
 #include "Students_base.h"
-
 class Backup
 {
 	Backup *m_pBackup;

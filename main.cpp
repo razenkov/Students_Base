@@ -1,20 +1,17 @@
 #include "stdafx.h"
-#include <Windows.h>
-#include <iostream>
-#include "Students_base.h"
 #include "Backup.h"
 
 int main()
 {
-	//std::cout << "+++++++++++++++++++++++++++++++++";
+	std::cout << "Commit1";
 	Backup backup;
-	HANDLE hwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+	//HANDLE hwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 
 	if ((checkForBaseFile()) == 0)
 	{
-		std::cout << "Do you want to recover your student's list or you you want to innit new list? ";
+		std::cout << "Do you want to recover your student's list or you want to innit new list? ";
 	}
-	//std::cout << "+++++++++++++++++++++++++++++++++";
+	
 	char startAnswer;
 	std::cin >> startAnswer;
 
@@ -25,8 +22,6 @@ int main()
 	{
 		numStud = countStudentsFromBase();
 		pJornal = new STUDENT[numStud];
-
-
 		backupFromFile(pJornal, numStud);
 
 	}
@@ -52,7 +47,6 @@ int main()
 			"EDIT STUDENT PROFILES PRESS 5\n"
 			"ADD/DELETE STUDENT    PRESS 6\n"
 			"TO FINISH             PRESS 0\n\n";
-
 
 		std::cin >> choise;
 		std::cout << "\n";
@@ -90,23 +84,23 @@ int main()
 			std::cin >> choise;
 			if (choise == 1)
 			{
-				SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
+				//SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
 				std::cout << "\np11111111Jornal before - " << pJornal;
 				std::cout << "\np11111111numStud before - " << numStud;
-				SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+				//SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 
 				pJornal = addStudent(pJornal, &numStud);
 
-				SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
+				//SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
 				std::cout << "\np1111111Jornal after - " << pJornal;
 				std::cout << "\np11111111numStud after - " << numStud;
-				SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+				//SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			}
 			else if (choise == 2)
 			{
-				SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
+				//SetConsoleTextAttribute(hwnd, FOREGROUND_RED | FOREGROUND_INTENSITY);
 				pJornal = deleteStudent(pJornal, &numStud);
-				SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+				//SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			}
 			break;
 		case 0:
