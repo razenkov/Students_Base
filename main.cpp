@@ -3,7 +3,8 @@
 
 int main()
 {
-	std::cout << "Commit1";
+
+	std::cout << "10.30";
 	Backup backup;
 	//HANDLE hwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 
